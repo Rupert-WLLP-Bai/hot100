@@ -1,0 +1,12 @@
+CompileFlags:
+  Add: [-std=c++17, -Wall]
+
+Diagnostics:
+  Suppress: ["-Wc++17-extensions"]
+
+InlayHints:
+  ParameterNames: true
+  DeducedTypes: true
+
+Index:
+  Background: Build
