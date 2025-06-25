@@ -1,5 +1,5 @@
 CompileFlags:
-  Add: [-std=c++17, -Wall]
+  Add: [-std=c++17, -Wall, -Wextra, -O2, -g]
 
 Diagnostics:
   Suppress: ["-Wc++17-extensions"]
