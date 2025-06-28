@@ -1,4 +1,5 @@
 #include "stdcc.h"
+#include <cstddef>
 #include <unordered_map>
 #include <utility>
 
@@ -42,7 +43,7 @@ class LRUCache {
     }
 
   private:
-    int capacity;
+    size_t capacity;
     list<pair<int, int>> cache; // 存储键值对, 最近使用的在最前
     unordered_map<int, list<pair<int, int>>::iterator> m; // key -> list迭代器
 };
