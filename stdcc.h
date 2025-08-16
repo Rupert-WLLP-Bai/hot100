@@ -52,7 +52,8 @@
 #include <ccomplex>
 #include <cfenv>
 #include <cinttypes>
-#include <cstdalign>
+// #include <cstdalign>
+#include <stdalign.h>
 #include <cstdbool>
 #include <cstdint>
 #include <ctgmath>

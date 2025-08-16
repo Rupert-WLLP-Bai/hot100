@@ -14,6 +14,7 @@ class LRUCache {
         auto it = m.find(key);
         if (it == m.end()) return -1;
         // 找到结果 移动cache
+        // splice参数含义: 把it->second指向的结点移动到cache的开头
         cache.splice(cache.begin(), cache, it->second);
         return it->second->second; // 返回迭代器指向的pair的value
     }
@@ -44,6 +45,6 @@ class LRUCache {
 
   private:
     size_t capacity;
-    list<pair<int, int>> cache; // 存储键值对, 最近使用的在最前
+    list<pair<int, int>> cache;                           // 存储键值对, 最近使用的在最前
     unordered_map<int, list<pair<int, int>>::iterator> m; // key -> list迭代器
 };
